@@ -12,6 +12,7 @@ image:
   }
 layout: $layouts/PostLayout.astro
 ---
+import Markdown from '@astrojs/markdown-component'
 
 [Astro](https://astro.build/) and [SvelteKit](https://kit.svelte.dev/) are both modern frameworks. Originally, I built my blog [ByteofDev](https://byteofdev.com/) using SvelteKit, but I recently migrated to Astro due to performance and tools for writing. This article talks about why I did it and how.
 
@@ -25,7 +26,7 @@ Astro supports [component-level partial hydration](https://docs.astro.build/en/c
 
 ## Blog-related features
 
-While doing this, I also was trying to migrate from a headless CMS to using markdown and Git to allow for more flexibility and performance. For markdown with Svelte components, Svelte has [mdsvex](https://mdsvex.com/), which works pretty well, but Astro has components in markdown built-in. Astro also has an easy-to-use API for getting the frontmatter of markdown files (`Astro.fetchContent()`), making it easy to implement features like tag pages. Finally, Astro offers built-in sitemap and RSS feed generation, which is helpful for SEO and reaching a wider range of readers.
+While doing this, I also was trying to migrate from a headless CMS to using markdown and Git to allow for more flexibility and performance. For markdown with Svelte components, Svelte has [mdsvex](https://mdsvex.com/), which works pretty well, but Astro has components in markdown built-in. Astro also has an easy-to-use API for getting the frontmatter of markdown files (`await Astro.glob()`), making it easy to implement features like tag pages. Finally, Astro offers built-in sitemap and RSS feed generation, which is helpful for SEO and reaching a wider range of readers.
 
 # Migrating to Astro
 

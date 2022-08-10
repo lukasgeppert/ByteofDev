@@ -15,7 +15,7 @@ const { title, description, publishedRAW, updatedRAW, image, author, tags } =
 	Astro.props.content;
 const published = dayjs(publishedRAW).toISOString();
 const updated = dayjs(updatedRAW).toISOString();
-const canonicalURL = Astro.request.canonicalURL;
+const canonicalURL = new URL(Astro.request.url, Astro.site);
 ---
 
 <BaseLayout
@@ -178,7 +178,7 @@ const canonicalURL = Astro.request.canonicalURL;
 		</div>
 		<EmailPrompt client:visible />
 	</div>
-	<style global>
+	<style is:global>
 		@import "../lib/stylesheets/postTheme.css";
 	</style>
 </BaseLayout>

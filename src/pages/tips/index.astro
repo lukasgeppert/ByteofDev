@@ -1,7 +1,7 @@
 ---
 import StoryCard from "$lib/components/card.svelte";
 import BaseLayout from "$layouts/BaseLayout.astro";
-let posts = Astro.fetchContent("/src/pages/tips/*.md");
+let posts = await Astro.glob("/src/pages/tips/*.mdx");
 posts.sort((a, b) => b.published - a.published);
 posts = posts.slice(0, 20);
 ---

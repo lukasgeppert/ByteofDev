@@ -10,9 +10,9 @@ tags: [JavaScript, Arrays]
 published: 1641764814162
 updated: 1641764814162
 layout: $layouts/PostLayout.astro
-setup: |
-  import Callout from '$lib/components/callout.svelte'
 ---
+import Callout from '$lib/components/callout.svelte'
+import Markdown from '@astrojs/markdown-component'
 
 If you are learning about iterating through arrays, you have likely come across two different methods. `Array.map()` and `Array.forEach()`. At first glance, it might seem like they are the same, as they both iterate through arrays and call a function for each item. However, they are different, and many people mix them up, which can be very bad.
 

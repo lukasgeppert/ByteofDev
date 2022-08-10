@@ -4,8 +4,8 @@ import BaseLayout from "$layouts/BaseLayout.astro";
 export function getStaticPaths() {
 	let tagObj = {};
 	[
-		...Astro.fetchContent("/src/pages/tips/*.md"),
-		...Astro.fetchContent("/src/pages/posts/*.md"),
+		...await Astro.glob("/src/pages/tips/*.mdx"),
+		...await Astro.glob("/src/pages/posts/*.mdx"),
 	].forEach((post) => {
 		post.tags.forEach((tag) => {
 			tag = tag.toLowerCase();
@@ -24,8 +24,8 @@ export function getStaticPaths() {
 	return paths;
 }
 let posts = [
-	...Astro.fetchContent("/src/pages/tips/*.md"),
-	...Astro.fetchContent("/src/pages/posts/*.md"),
+	...await Astro.glob("/src/pages/tips/*.mdx"),
+	...await Astro.glob("/src/pages/posts/*.mdx"),
 ];
 
 const { tag } = Astro.props;

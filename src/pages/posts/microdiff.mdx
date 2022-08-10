@@ -10,9 +10,10 @@ tags: [Microdiff, Performance]
 published: 1641072124246
 updated: 1641090190755
 layout: $layouts/PostLayout.astro
-setup: |
-  import Callout from '$lib/components/callout.svelte'
 ---
+import Callout from '$lib/components/callout.svelte'
+import Markdown from '@astrojs/markdown-component'
+
 I maintain [Microdiff](https://github.com/AsyncBanana/microdiff), a performance and size optimized library for deep object diffing.
 Someone posted in a [Microdiff issue](https://github.com/AsyncBanana/microdiff/issues/2#issuecomment-962491393) that asked me to write a blog post about how I made Microdiff fast.
 <Callout type="quote">I believe that an explainer (perhaps a blog post?) of the inefficiencies you've noticed with other libraries and how you've overcome them (including the "edge cases" you're saying are unsupported) would be very interesting. They'd also help correctly interpret the benchmark results.</Callout>

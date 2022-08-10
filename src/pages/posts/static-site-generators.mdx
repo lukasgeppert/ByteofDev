@@ -11,9 +11,9 @@ image:
     alt: "Logos of various static site generators like Next.js, Jekyll, Gatsby, Hugo, and Astro",
   }
 layout: $layouts/PostLayout.astro
-setup: |
-  import Callout from '$lib/components/callout.svelte'
 ---
+import Callout from '$lib/components/callout.svelte'
+import Markdown from '@astrojs/markdown-component'
 
 Static site generators (SSGs) can be beneficial for making large websites without reducing performance. They have existed for more than a decade, but they have evolved a lot, especially more recently due to the rise of "Jamstack." This article goes over the background of static site generators, why people use them, and the current state of them.
 

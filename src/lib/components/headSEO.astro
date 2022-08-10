@@ -11,7 +11,7 @@ const {
 	updated,
 	author,
 } = Astro.props.SEO;
-const canonicalURL = Astro.request.canonicalURL;
+const canonicalURL = new URL(Astro.request.url, Astro.site);
 ---
 
 <meta charset="UTF-8" />

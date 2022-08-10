@@ -11,17 +11,17 @@ image:
     alt: State of JS logo
   }
 layout: $layouts/PostLayout.astro
-setup: |
-  import Callout from '$lib/components/callout.svelte'
 ---
+import Callout from '$lib/components/callout.svelte'
+import Markdown from '@astrojs/markdown-component'
 
 This week for State of the Web, we have a special edition about one of the most extensive surveys in web development, the State of JS. State of JS is a survey about everything related to JavaScript, including language features, front-end frameworks, and bundlers. This year's version, the 2021/2022 version, collected more than 15,000 responses. This article looks at the results and what they mean for web development.
 
 <Callout type="info">
-There are a few terms in this that mean things specific to this survey:<br>
-<b>Usage</b>: The percentage of people that have used the library or feature out of the total survey takers<br>
-<b>Awareness</b>: The percentage of people who know about a feature/library out of the total survey takers<br>
-<b>Interest</b>: (Only for libraries) The percentage of people that want to learn a library out of everyone who does not already use that library<br>
+There are a few terms in this that mean things specific to this survey:<br />
+<b>Usage</b>: The percentage of people that have used the library or feature out of the total survey takers<br />
+<b>Awareness</b>: The percentage of people who know about a feature/library out of the total survey takers<br />
+<b>Interest</b>: (Only for libraries) The percentage of people that want to learn a library out of everyone who does not already use that library<br />
 <b>Satisfaction</b>: (Only for libraries) The percentage of people who have used a library and are satisfied out of everyone who has used that library
 </Callout>
 

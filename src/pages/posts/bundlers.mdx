@@ -11,9 +11,9 @@ image:
     alt: Logos of various bundlers,
   }
 layout: $layouts/PostLayout.astro
-setup: |
-  import Callout from '$lib/components/callout.svelte'
 ---
+import Callout from '$lib/components/callout.svelte'
+import Markdown from '@astrojs/markdown-component'
 
 Ever since Browserify, bundlers have been extremely important in the web ecosystem. They provide the ability to automatically process code, which opens up opportunities for performance optimization and non-native languages. This article looks at the background of bundlers, why they are essential, and their current state.
 
