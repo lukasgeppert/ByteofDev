@@ -15,7 +15,7 @@ export default defineConfig(
     plugins: [svelte({})]
   },
   build: {},
-  site: "https://byteofdev.com",
+  site: "https://bootstrapped.me",
   markdown: {
     // Can be 'shiki' (default), 'prism' or false to disable highlighting
     syntaxHighlight: 'prism',
